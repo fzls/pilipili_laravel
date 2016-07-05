@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - pilipili_laravel@localhost" uuid="6ed89f4e-f329-4f77-ba30-b5ef9022ff06">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>pilipili_laravel.*</schema-pattern>
+      <default-schemas>pilipili_laravel.*</default-schemas>
+    </data-source>
+  </component>
+</project>
