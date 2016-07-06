@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\User;
-use Validator;
 use App\Http\Controllers\Controller;
-use Illuminate\Foundation\Auth\ThrottlesLogins;
+use App\Image;
+use App\User;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Http\Request;
+use Validator;
 
 class AuthController extends Controller
 {
@@ -48,6 +49,23 @@ class AuthController extends Controller
     protected $username = 'email_or_id';
 
     /**
+     * Create a new authentication controller instance.
+     *
+     * @return void
+     */
+    public function __construct() {
+        $this->middleware($this->guestMiddleware(), ['except' => 'logout']);
+    }
+
+    public function show_welcome_page() {
+        return view('auth.welcome');
+    }
+
+    public function change_background() {
+        return url(Image::orderByRaw("rand()")->first()->filepath);
+    }
+
+    /**
      * check if the email_or_id field is email or not
      * if is, then we set the credentials to email and password
      * otherwise, we use pilipili_id and password to log in
@@ -59,16 +77,6 @@ class AuthController extends Controller
         $email_or_id = filter_var($request->input('email_or_id'), FILTER_VALIDATE_EMAIL) ? 'email' : 'pilipili_id';
         $request->merge([$email_or_id => $request->input('email_or_id')]);
         return $request->only($email_or_id, 'password');
-    }
-
-    /**
-     * Create a new authentication controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware($this->guestMiddleware(), ['except' => 'logout']);
     }
 
     /**
@@ -95,9 +103,12 @@ class AuthController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            'pilipili_id' => $data['pilipili_id'],
-            'email' => $data['email'],
-            'password' => bcrypt($data['password']),
+                                'pilipili_id'                      => $data['pilipili_id'],
+                                'email'                            => $data['email'],
+                                'password'                         => bcrypt($data['password']),
+                                'avatar_filepath'                  => 'uploaded_img/avatar_mock_2.jpg',
+                                'custom_background_image_filepath' => 'uploaded_img/detail_background_image_mock_2.jpg',
+                                'role'                             => 'user',
         ]);
     }
 }

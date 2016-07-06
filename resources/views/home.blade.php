@@ -18,7 +18,7 @@
                 <section class="content container-fluid" id="current-user">
                     <a href="{{url('user/member')}}?id={{$current_user['id']}}">
                         <div class="col-md-5">
-                            <img class="img-user" src="{{$current_user['avatar_filepath']}}" alt="">
+                            <img class="img-user" src="{{$current_user['avatar_filepath']}}" alt="user avatar">
                         </div>
                         <div class="col-md-7" style="top: 10px;">
                             <div class="link-black-bold">{{$current_user['pilipili_id']}}</div>
@@ -120,21 +120,26 @@
                     <div class="title"><a class="link-black" href="#">New work: Everyone</a></div>
                     <div class="text-center">
                         <div class="container-fluid">
-                            @foreach($new_work_everyone as $work)
-                                <div class="col-md-4">
-                                    <div>
-                                        <a href="{{url('image/detail')}}?image_id={{$work['id']}}">
-                                            <img src="{{$work['filepath']}}" alt="" class="img-full-width">
-                                        </a>
-                                    </div>
-                                    <div>
-                                        <a href="{{url('image/detail')}}?image_id={{$work['id']}}">{{$work['name']}}</a>
-                                    </div>
-                                    <div>
-                                        <a href="{{url('user/member_illust')}}?id={{$work['author_id']}}">{{$work->author['pilipili_id']}}</a>
-                                    </div>
+                            @for($i=0;$i<2;++$i)
+                                <div class="row">
+                                    @for($j=0;$j<3;++$j)
+                                        <?php $work = $new_work_everyone[$i * 3 + $j];?>
+                                        <div class="col-md-4">
+                                            <div>
+                                                <a href="{{url('image/detail')}}?image_id={{$work['id']}}">
+                                                    <img src="{{$work['filepath']}}" alt="" class="img-full-width">
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="{{url('image/detail')}}?image_id={{$work['id']}}">{{$work['name']}}</a>
+                                            </div>
+                                            <div>
+                                                <a href="{{url('user/member_illust')}}?id={{$work['author_id']}}">{{$work->author['pilipili_id']}}</a>
+                                            </div>
+                                        </div>
+                                    @endfor
                                 </div>
-                            @endforeach
+                            @endfor
                         </div>
                     </div>
                 </div>
@@ -198,25 +203,39 @@
                     <div class="title"><a class="link-black" href="#">new work : Following</a></div>
                     <div class="text-center">
                         <div class="container-fluid">
-                            @foreach ($new_work_following as $work)
-                                <div class="col-md-4">
-                                    <div>
-                                        <a href="{{url('image/detail')}}?image_id={{$work['id']}}">
-                                            <img src="{{$work['filepath']}}" alt="" class="img-full-width">
-                                        </a>
-                                    </div>
-                                    <div>
-                                        <a href="{{url('image/detail')}}?image_id={{$work['id']}}">{{$work['name']}}</a>
-                                    </div>
-                                    <div>
-                                        <a href="{{url('user/member_illust')}}?id={{$work['author_id']}}">{{$work->author['pilipili_id']}}</a>
-                                    </div>
+                            <?php $nwf_cnt = count($new_work_following);?>
+                            @for($i=0;$i<2;++$i)
+                                @if($nwf_cnt==0)
+                                    @break
+                                @endif
+                                <div class="row">
+                                    @for($j=0;$j<3;++$j)
+                                        @if($nwf_cnt==0)
+                                            @break
+                                        @endif
+                                        <?php --$nwf_cnt;?>
+                                        <?php $work = $new_work_following[$i * 3 + $j];?>
+                                        <div class="col-md-4">
+                                            <div>
+                                                <a href="{{url('image/detail')}}?image_id={{$work['id']}}">
+                                                    <img src="{{$work['filepath']}}" alt="" class="img-full-width">
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="{{url('image/detail')}}?image_id={{$work['id']}}">{{$work['name']}}</a>
+                                            </div>
+                                            <div>
+                                                <a href="{{url('user/member_illust')}}?id={{$work['author_id']}}">{{$work->author['pilipili_id']}}</a>
+                                            </div>
+                                        </div>
+                                    @endfor
                                 </div>
-                            @endforeach
+                            @endfor
                         </div>
                     </div>
                 </div>
             </div>
+
 
             <div class="container-fluid col-md-3" id="right-side">
                 <div class="content">

@@ -14,7 +14,7 @@
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
                 <li><a href="{{url('home')}}">Home</a></li>
-                <li><a href="{{url('img/upload')}}">Submit</a></li>
+                <li><a href="{{url('image/upload')}}">Submit</a></li>
                 <li><a href="#">Manage</a></li>
                 <li><a href="#">Bookmark</a></li>
                 <li><a href="#">Feed</a></li>
