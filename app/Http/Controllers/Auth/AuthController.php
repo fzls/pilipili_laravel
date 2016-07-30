@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace Pilipili\Http\Controllers\Auth;
 
-use App\Http\Controllers\Controller;
-use App\Image;
-use App\User;
+use Pilipili\Http\Controllers\Controller;
+use Pilipili\Image;
+use Pilipili\User;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Http\Request;

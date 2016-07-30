@@ -8,63 +8,63 @@
  */
 
 
-namespace App{
+namespace Pilipili{
 /**
- * App\Ad
+ * Pilipili\Ad
  *
  * @property integer $id
  * @property string $link
  * @property string $post_path
  * @property \Carbon\Carbon $created_at
  * @property \Carbon\Carbon $updated_at
- * @method static \Illuminate\Database\Query\Builder|\App\Ad whereId($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Ad whereLink($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Ad wherePostPath($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Ad whereCreatedAt($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Ad whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\Ad whereId($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\Ad whereLink($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\Ad wherePostPath($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\Ad whereCreatedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\Ad whereUpdatedAt($value)
  */
 	class Ad extends \Eloquent {}
 }
 
-namespace App{
+namespace Pilipili{
 /**
- * App\Banner
+ * Pilipili\Banner
  *
  * @property integer $id
  * @property string $link
  * @property string $post_path
  * @property \Carbon\Carbon $created_at
  * @property \Carbon\Carbon $updated_at
- * @method static \Illuminate\Database\Query\Builder|\App\Banner whereId($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Banner whereLink($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Banner wherePostPath($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Banner whereCreatedAt($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Banner whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\Banner whereId($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\Banner whereLink($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\Banner wherePostPath($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\Banner whereCreatedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\Banner whereUpdatedAt($value)
  */
 	class Banner extends \Eloquent {}
 }
 
-namespace App{
+namespace Pilipili{
 /**
- * App\ClickImageEvent
+ * Pilipili\ClickImageEvent
  *
  * @property integer $id
  * @property integer $user_id
  * @property integer $image_id
  * @property \Carbon\Carbon $created_at
  * @property \Carbon\Carbon $updated_at
- * @method static \Illuminate\Database\Query\Builder|\App\ClickImageEvent whereId($value)
- * @method static \Illuminate\Database\Query\Builder|\App\ClickImageEvent whereUserId($value)
- * @method static \Illuminate\Database\Query\Builder|\App\ClickImageEvent whereImageId($value)
- * @method static \Illuminate\Database\Query\Builder|\App\ClickImageEvent whereCreatedAt($value)
- * @method static \Illuminate\Database\Query\Builder|\App\ClickImageEvent whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\ClickImageEvent whereId($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\ClickImageEvent whereUserId($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\ClickImageEvent whereImageId($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\ClickImageEvent whereCreatedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\ClickImageEvent whereUpdatedAt($value)
  */
 	class ClickImageEvent extends \Eloquent {}
 }
 
-namespace App{
+namespace Pilipili{
 /**
- * App\Comment
+ * Pilipili\Comment
  *
  * @property integer $id
  * @property integer $user_id
@@ -76,42 +76,42 @@ namespace App{
  * @property integer $vote_count
  * @property \Carbon\Carbon $created_at
  * @property \Carbon\Carbon $updated_at
- * @property-read \App\User $user
- * @property-read \App\Image $image
- * @property-read \App\Comment $reply_to
- * @method static \Illuminate\Database\Query\Builder|\App\Comment whereId($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Comment whereUserId($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Comment whereImageId($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Comment whereContent($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Comment whereReplyToCommentId($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Comment whereVoteUp($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Comment whereVoteDown($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Comment whereVoteCount($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Comment whereCreatedAt($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Comment whereUpdatedAt($value)
+ * @property-read \Pilipili\User $user
+ * @property-read \Pilipili\Image $image
+ * @property-read \Pilipili\Comment $reply_to
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\Comment whereId($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\Comment whereUserId($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\Comment whereImageId($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\Comment whereContent($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\Comment whereReplyToCommentId($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\Comment whereVoteUp($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\Comment whereVoteDown($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\Comment whereVoteCount($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\Comment whereCreatedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\Comment whereUpdatedAt($value)
  */
 	class Comment extends \Eloquent {}
 }
 
-namespace App{
+namespace Pilipili{
 /**
- * App\Follow
+ * Pilipili\Follow
  *
  * @property integer $id
  * @property integer $follower_id
  * @property integer $followee_id
  * @property \Carbon\Carbon $created_at
  * @property \Carbon\Carbon $updated_at
- * @method static \Illuminate\Database\Query\Builder|\App\Follow whereId($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Follow whereFollowerId($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Follow whereFolloweeId($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Follow whereCreatedAt($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Follow whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\Follow whereId($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\Follow whereFollowerId($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\Follow whereFolloweeId($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\Follow whereCreatedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\Follow whereUpdatedAt($value)
  */
 	class Follow extends \Eloquent {}
 }
 
-namespace App{
+namespace Pilipili{
 /**
  * Class Image
  *
@@ -135,57 +135,57 @@ namespace App{
  * @property string $md5_hash
  * @property \Carbon\Carbon $created_at
  * @property \Carbon\Carbon $updated_at
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Comment[] $comments
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\User[] $visited_users
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\User[] $rated_users
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\ClickImageEvent[] $visits
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\RateImageEvent[] $rates
- * @property-read \App\User $author
- * @property-read \App\ImageCategory $category
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Tag[] $tags
- * @method static \Illuminate\Database\Query\Builder|\App\Image whereId($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Image whereName($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Image whereFilepath($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Image whereFilesize($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Image whereFilename($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Image whereFiletype($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Image whereRatings($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Image whereViews($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Image whereAuthorId($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Image whereTotalScore($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Image whereResolutionHeight($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Image whereResolutionWidth($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Image whereCategoryId($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Image whereDescription($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Image whereBrowsingRestriction($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Image wherePrivacy($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Image whereMd5Hash($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Image whereCreatedAt($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Image whereUpdatedAt($value)
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Pilipili\Comment[] $comments
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Pilipili\User[] $visited_users
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Pilipili\User[] $rated_users
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Pilipili\ClickImageEvent[] $visits
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Pilipili\RateImageEvent[] $rates
+ * @property-read \Pilipili\User $author
+ * @property-read \Pilipili\ImageCategory $category
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Pilipili\Tag[] $tags
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\Image whereId($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\Image whereName($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\Image whereFilepath($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\Image whereFilesize($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\Image whereFilename($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\Image whereFiletype($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\Image whereRatings($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\Image whereViews($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\Image whereAuthorId($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\Image whereTotalScore($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\Image whereResolutionHeight($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\Image whereResolutionWidth($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\Image whereCategoryId($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\Image whereDescription($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\Image whereBrowsingRestriction($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\Image wherePrivacy($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\Image whereMd5Hash($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\Image whereCreatedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\Image whereUpdatedAt($value)
  */
 	class Image extends \Eloquent {}
 }
 
-namespace App{
+namespace Pilipili{
 /**
- * App\ImageCategory
+ * Pilipili\ImageCategory
  *
  * @property integer $id
  * @property string $name
  * @property \Carbon\Carbon $created_at
  * @property \Carbon\Carbon $updated_at
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Image[] $images
- * @method static \Illuminate\Database\Query\Builder|\App\ImageCategory whereId($value)
- * @method static \Illuminate\Database\Query\Builder|\App\ImageCategory whereName($value)
- * @method static \Illuminate\Database\Query\Builder|\App\ImageCategory whereCreatedAt($value)
- * @method static \Illuminate\Database\Query\Builder|\App\ImageCategory whereUpdatedAt($value)
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Pilipili\Image[] $images
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\ImageCategory whereId($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\ImageCategory whereName($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\ImageCategory whereCreatedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\ImageCategory whereUpdatedAt($value)
  */
 	class ImageCategory extends \Eloquent {}
 }
 
-namespace App{
+namespace Pilipili{
 /**
- * App\ImageTag
+ * Pilipili\ImageTag
  *
  * @property integer $id
  * @property integer $image_id
@@ -193,19 +193,19 @@ namespace App{
  * @property integer $added_user
  * @property \Carbon\Carbon $created_at
  * @property \Carbon\Carbon $updated_at
- * @method static \Illuminate\Database\Query\Builder|\App\ImageTag whereId($value)
- * @method static \Illuminate\Database\Query\Builder|\App\ImageTag whereImageId($value)
- * @method static \Illuminate\Database\Query\Builder|\App\ImageTag whereTagId($value)
- * @method static \Illuminate\Database\Query\Builder|\App\ImageTag whereAddedUser($value)
- * @method static \Illuminate\Database\Query\Builder|\App\ImageTag whereCreatedAt($value)
- * @method static \Illuminate\Database\Query\Builder|\App\ImageTag whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\ImageTag whereId($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\ImageTag whereImageId($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\ImageTag whereTagId($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\ImageTag whereAddedUser($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\ImageTag whereCreatedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\ImageTag whereUpdatedAt($value)
  */
 	class ImageTag extends \Eloquent {}
 }
 
-namespace App{
+namespace Pilipili{
 /**
- * App\RateImageEvent
+ * Pilipili\RateImageEvent
  *
  * @property integer $id
  * @property integer $user_id
@@ -213,37 +213,37 @@ namespace App{
  * @property integer $score
  * @property \Carbon\Carbon $created_at
  * @property \Carbon\Carbon $updated_at
- * @method static \Illuminate\Database\Query\Builder|\App\RateImageEvent whereId($value)
- * @method static \Illuminate\Database\Query\Builder|\App\RateImageEvent whereUserId($value)
- * @method static \Illuminate\Database\Query\Builder|\App\RateImageEvent whereImageId($value)
- * @method static \Illuminate\Database\Query\Builder|\App\RateImageEvent whereScore($value)
- * @method static \Illuminate\Database\Query\Builder|\App\RateImageEvent whereCreatedAt($value)
- * @method static \Illuminate\Database\Query\Builder|\App\RateImageEvent whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\RateImageEvent whereId($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\RateImageEvent whereUserId($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\RateImageEvent whereImageId($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\RateImageEvent whereScore($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\RateImageEvent whereCreatedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\RateImageEvent whereUpdatedAt($value)
  */
 	class RateImageEvent extends \Eloquent {}
 }
 
-namespace App{
+namespace Pilipili{
 /**
- * App\Tag
+ * Pilipili\Tag
  *
- * @property integer                                                    $id
- * @property string                                                     $name
- * @property \Carbon\Carbon                                             $created_at
- * @property \Carbon\Carbon                                             $updated_at
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\User[]  $users
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Image[] $images
- * @method static \Illuminate\Database\Query\Builder|\App\Tag whereId($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Tag whereName($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Tag whereCreatedAt($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Tag whereUpdatedAt($value)
+ * @property integer $id
+ * @property string $name
+ * @property \Carbon\Carbon $created_at
+ * @property \Carbon\Carbon $updated_at
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Pilipili\User[] $users
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Pilipili\Image[] $images
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\Tag whereId($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\Tag whereName($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\Tag whereCreatedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\Tag whereUpdatedAt($value)
  */
 	class Tag extends \Eloquent {}
 }
 
-namespace App{
+namespace Pilipili{
 /**
- * App\User
+ * Pilipili\User
  *
  * @property integer $id
  * @property string $pilipili_id
@@ -271,59 +271,59 @@ namespace App{
  * @property string $remember_token
  * @property \Carbon\Carbon $created_at
  * @property \Carbon\Carbon $updated_at
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Comment[] $comments
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Image[] $visited_images
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Image[] $rated_images
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\ClickImageEvent[] $visits
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\RateImageEvent[] $rates
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Image[] $works
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\User[] $followings
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\User[] $followers
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Tag[] $tags
- * @method static \Illuminate\Database\Query\Builder|\App\User whereId($value)
- * @method static \Illuminate\Database\Query\Builder|\App\User wherePilipiliId($value)
- * @method static \Illuminate\Database\Query\Builder|\App\User whereEmail($value)
- * @method static \Illuminate\Database\Query\Builder|\App\User wherePassword($value)
- * @method static \Illuminate\Database\Query\Builder|\App\User whereNickname($value)
- * @method static \Illuminate\Database\Query\Builder|\App\User whereGender($value)
- * @method static \Illuminate\Database\Query\Builder|\App\User whereGenderVisibility($value)
- * @method static \Illuminate\Database\Query\Builder|\App\User whereBirth($value)
- * @method static \Illuminate\Database\Query\Builder|\App\User whereBirthVisibility($value)
- * @method static \Illuminate\Database\Query\Builder|\App\User whereOccupation($value)
- * @method static \Illuminate\Database\Query\Builder|\App\User whereOccupationVisibility($value)
- * @method static \Illuminate\Database\Query\Builder|\App\User whereCountry($value)
- * @method static \Illuminate\Database\Query\Builder|\App\User whereCountryVisibility($value)
- * @method static \Illuminate\Database\Query\Builder|\App\User whereCity($value)
- * @method static \Illuminate\Database\Query\Builder|\App\User whereCityVisibility($value)
- * @method static \Illuminate\Database\Query\Builder|\App\User whereLevel($value)
- * @method static \Illuminate\Database\Query\Builder|\App\User whereRole($value)
- * @method static \Illuminate\Database\Query\Builder|\App\User whereIsPremiumMember($value)
- * @method static \Illuminate\Database\Query\Builder|\App\User wherePremiumMemberEndTime($value)
- * @method static \Illuminate\Database\Query\Builder|\App\User whereSelfDescription($value)
- * @method static \Illuminate\Database\Query\Builder|\App\User whereAvatarFilepath($value)
- * @method static \Illuminate\Database\Query\Builder|\App\User whereCustomBackgroundImageFilepath($value)
- * @method static \Illuminate\Database\Query\Builder|\App\User wherePreferedLanguage($value)
- * @method static \Illuminate\Database\Query\Builder|\App\User whereRememberToken($value)
- * @method static \Illuminate\Database\Query\Builder|\App\User whereCreatedAt($value)
- * @method static \Illuminate\Database\Query\Builder|\App\User whereUpdatedAt($value)
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Pilipili\Comment[] $comments
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Pilipili\Image[] $visited_images
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Pilipili\Image[] $rated_images
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Pilipili\ClickImageEvent[] $visits
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Pilipili\RateImageEvent[] $rates
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Pilipili\Image[] $works
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Pilipili\User[] $followings
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Pilipili\User[] $followers
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Pilipili\Tag[] $tags
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\User whereId($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\User wherePilipiliId($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\User whereEmail($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\User wherePassword($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\User whereNickname($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\User whereGender($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\User whereGenderVisibility($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\User whereBirth($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\User whereBirthVisibility($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\User whereOccupation($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\User whereOccupationVisibility($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\User whereCountry($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\User whereCountryVisibility($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\User whereCity($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\User whereCityVisibility($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\User whereLevel($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\User whereRole($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\User whereIsPremiumMember($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\User wherePremiumMemberEndTime($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\User whereSelfDescription($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\User whereAvatarFilepath($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\User whereCustomBackgroundImageFilepath($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\User wherePreferedLanguage($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\User whereRememberToken($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\User whereCreatedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\User whereUpdatedAt($value)
  */
 	class User extends \Eloquent {}
 }
 
-namespace App{
+namespace Pilipili{
 /**
- * App\UserTag
+ * Pilipili\UserTag
  *
  * @property integer $id
  * @property integer $user_id
  * @property integer $tag_id
  * @property \Carbon\Carbon $created_at
  * @property \Carbon\Carbon $updated_at
- * @method static \Illuminate\Database\Query\Builder|\App\UserTag whereId($value)
- * @method static \Illuminate\Database\Query\Builder|\App\UserTag whereUserId($value)
- * @method static \Illuminate\Database\Query\Builder|\App\UserTag whereTagId($value)
- * @method static \Illuminate\Database\Query\Builder|\App\UserTag whereCreatedAt($value)
- * @method static \Illuminate\Database\Query\Builder|\App\UserTag whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\UserTag whereId($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\UserTag whereUserId($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\UserTag whereTagId($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\UserTag whereCreatedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|\Pilipili\UserTag whereUpdatedAt($value)
  */
 	class UserTag extends \Eloquent {}
 }

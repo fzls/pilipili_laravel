@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 /*
 |--------------------------------------------------------------------------
@@ -11,15 +11,15 @@
 |
 */
 
-use App\Banner;
-use App\ClickImageEvent;
-use App\Comment;
-use App\Image;
-use App\ImageCategory;
-use App\ImageTag;
-use App\RateImageEvent;
-use App\Tag;
-use App\User;
+use Pilipili\Banner;
+use Pilipili\ClickImageEvent;
+use Pilipili\Comment;
+use Pilipili\Image;
+use Pilipili\ImageCategory;
+use Pilipili\ImageTag;
+use Pilipili\RateImageEvent;
+use Pilipili\Tag;
+use Pilipili\User;
 use Illuminate\Http\Request;
 
 //validate data
@@ -65,22 +65,43 @@ Route::group(['prefix' => 'image', 'as' => 'image.'], function () {
     ]);
 });
 
-Route::group(['as' => 'auth'], function () {
+Route::group([], function () {
     Route::auth();
     Route::get('welcome', [
-        'as'   => 'auth.welcome',
+        'as'   => 'welcome',
         'uses' => 'Auth\AuthController@show_welcome_page',
     ]);
     Route::get('change_background', [
-        'as'   => 'auth.change_background',
+        'as'   => 'change_background',
         'uses' => 'Auth\AuthController@change_background',
     ]);
 });
 
 //below is for test only
-
+function p($s){
+    echo $s.'<br>';
+}
 Route::get('test', function (Request $request) {
-    return pathinfo('动漫【风之凌殇】2.jpg', PATHINFO_EXTENSION);
+    
+//    $page = User::paginate(5);
+//    foreach ($page as $user) {
+//        p($user->id.' : '.$user->pilipili_id);
+//    }
+////    $page->setPath(url('path/233/hhh'));
+//    $page->appends(['method'=>'post','action'=>'test'])->fragment('meow');
+//    p($page->firstItem());
+//    p($page->nextPageUrl());
+//    p($page->previousPageUrl());
+//    p($page->links());
+//    $collection = collect([
+//                              10 => ['product' => 'Desk', 'price' => 200],
+//                              11 => ['product' => 'Desk', 'price' => 200],
+//                          ]);
+//
+//    $values = $collection->values();
+//
+//    print_r($values->all()) ;
+//    return pathinfo('动漫【风之凌殇】2.jpg', PATHINFO_EXTENSION);
 //    $a = [];
 //    for($i=0;$i<10;++$i) $a[]=$i;
 //    print_r($a);

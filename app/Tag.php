@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace Pilipili;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -8,7 +8,7 @@ class Tag extends Model
 {
     public function users()
     {
-        return $this->belongsToMany('App\User', 'user_tag');
+        return $this->belongsToMany('Pilipili\User', 'user_tag');
     }
 
     public function most_viewed_image()
@@ -18,6 +18,6 @@ class Tag extends Model
 
     public function images()
     {
-        return $this->belongsToMany('App\Image', 'image_tag');
+        return $this->belongsToMany('Pilipili\Image', 'image_tag');
     }
 }

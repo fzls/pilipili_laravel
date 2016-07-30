@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace Pilipili;
 
 use Illuminate\Database\Eloquent\Model;
 

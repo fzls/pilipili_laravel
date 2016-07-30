@@ -27,6 +27,7 @@
                 </div>
             </div>
 
+            {{--FIXME:add validater--}}
             @if ($errors->has('email_or_id'))
                 <div class="form-control error-prompt">
             <span class="input-xlarge uneditable-input pull-left" style="font-size: 10px;color:Silver;">

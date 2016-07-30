@@ -1,19 +1,19 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Pilipili\Http\Controllers;
 
-use App\Banner;
-use App\ClickImageEvent;
-use App\Comment;
-use App\Image;
-use App\ImageCategory;
-use App\ImageTag;
-use App\RateImageEvent;
-use App\Tag;
-use App\User;
+use Pilipili\Banner;
+use Pilipili\ClickImageEvent;
+use Pilipili\Comment;
+use Pilipili\Image;
+use Pilipili\ImageCategory;
+use Pilipili\ImageTag;
+use Pilipili\RateImageEvent;
+use Pilipili\Tag;
+use Pilipili\User;
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
+use Pilipili\Http\Requests;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;

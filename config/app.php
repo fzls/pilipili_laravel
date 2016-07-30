@@ -153,10 +153,10 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        Pilipili\Providers\AppServiceProvider::class,
+        Pilipili\Providers\AuthServiceProvider::class,
+        Pilipili\Providers\EventServiceProvider::class,
+        Pilipili\Providers\RouteServiceProvider::class,
         /*
          * Laravel 5 IDE Helper Generator
          */

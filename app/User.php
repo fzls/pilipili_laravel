@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace Pilipili;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
@@ -25,38 +25,38 @@ class User extends Authenticatable
     ];
 
     public function comments(){
-        return $this->hasMany('App\Comment');
+        return $this->hasMany('Pilipili\Comment');
     }
     
     public function visited_images(){
-        return $this->belongsToMany('App\Image','click_image_events');
+        return $this->belongsToMany('Pilipili\Image','click_image_events');
     }
     
     public function rated_images(){
-        return $this->belongsToMany('App\Image','rate_image_events');
+        return $this->belongsToMany('Pilipili\Image','rate_image_events');
     }
     
     public function visits(){
-        return $this->hasMany('App\ClickImageEvent');
+        return $this->hasMany('Pilipili\ClickImageEvent');
     }
     
     public function rates(){
-        return $this->hasMany('App\RateImageEvent');
+        return $this->hasMany('Pilipili\RateImageEvent');
     }
     
     public function works(){
-        return $this->hasMany('App\Image','author_id');
+        return $this->hasMany('Pilipili\Image','author_id');
     }
     
     public function followings(){
-        return $this->belongsToMany('App\User','follows','follower_id','followee_id');
+        return $this->belongsToMany('Pilipili\User','follows','follower_id','followee_id');
     }
     
     public function followers(){
-        return $this->belongsToMany('App\User','follows','followee_id','follower_id');
+        return $this->belongsToMany('Pilipili\User','follows','followee_id','follower_id');
     }
     
     public function tags(){
-        return $this->belongsToMany('App\Tag','user_tag');
+        return $this->belongsToMany('Pilipili\Tag','user_tag');
     }
 }
