@@ -17,6 +17,7 @@ use Pilipili\Http\Requests;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
+use Cache;
 
 class ImageController extends Controller
 {
@@ -31,7 +32,15 @@ class ImageController extends Controller
     }
     
     public function show_upload_form(){
-        return view('image.upload');
+        if(Cache::has('upload_form')){
+            return Cache::get('upload_form');
+        }
+
+        $page= view('image.upload')->render();
+
+        Cache::add('upload_form',$page,60*24);
+
+        return $page;
     }
 
     public function upload_images(Request $request){

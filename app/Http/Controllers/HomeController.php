@@ -9,7 +9,8 @@ use Pilipili\Image;
 use Pilipili\Tag;
 use Pilipili\User;
 use Carbon\Carbon;
-use Illuminate\Support\Facades\Auth;
+use Auth;
+use Cache;
 
 class HomeController extends Controller {
     /**
@@ -28,6 +29,13 @@ class HomeController extends Controller {
      */
     public function index() {
         $current_user = Auth::user();
+
+        /*fetch from cache if cached*/
+        $cache_key = 'index:'.$current_user->id;
+        if(Cache::has($cache_key)){
+            return Cache::get($cache_key);
+        }
+
         $followings = $current_user->followings;
         $suggested_users = User::whereNotIn('id', $followings->pluck('id'))->where('id', '!=', $current_user->id)->orderByRaw('rand()')->take(10)->get();
         $banner = Banner::orderBy('id', 'desc')->first();
@@ -71,7 +79,7 @@ class HomeController extends Controller {
             ],
         ];
 
-        return view('home', [
+        $page = view('home', [
             'current_user'       => $current_user,
             'followings'         => $followings,
             'suggested_users'    => $suggested_users,
@@ -83,10 +91,23 @@ class HomeController extends Controller {
             'new_work_following' => $new_work_following,
             'ad'                 => $ad,
             'leaderboards'       => $leaderboards,
-        ]);
+        ])->render();
+
+        /*save rendered page into cache for 30 mins*/
+        Cache::add($cache_key,$page,30);
+
+        return $page;
     }
 
     public function help() {
-        return view('help');
+        if(Cache::has('help')){
+            return Cache::get('help');
+        }
+
+        $page= view('help')->render();
+
+        Cache::add('help',$page,60*24);
+
+        return $page;
     }
 }

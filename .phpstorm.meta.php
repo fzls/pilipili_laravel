@@ -3,7 +3,7 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2016-07-10.
+    * Generated on 2016-07-31.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
@@ -108,6 +108,7 @@ namespace PHPSTORM_META {
             'queue.listener' instanceof \Illuminate\Queue\Listener,
             'queue.failer' instanceof \Illuminate\Queue\Failed\DatabaseFailedJobProvider,
             'IlluminateQueueClosure' instanceof \IlluminateQueueClosure,
+            'redis' instanceof \Illuminate\Redis\Database,
             'auth.password' instanceof \Illuminate\Auth\Passwords\PasswordBrokerManager,
             'auth.password.broker' instanceof \Illuminate\Auth\Passwords\PasswordBroker,
             'translation.loader' instanceof \Illuminate\Translation\FileLoader,
@@ -217,6 +218,7 @@ namespace PHPSTORM_META {
             'queue.listener' instanceof \Illuminate\Queue\Listener,
             'queue.failer' instanceof \Illuminate\Queue\Failed\DatabaseFailedJobProvider,
             'IlluminateQueueClosure' instanceof \IlluminateQueueClosure,
+            'redis' instanceof \Illuminate\Redis\Database,
             'auth.password' instanceof \Illuminate\Auth\Passwords\PasswordBrokerManager,
             'auth.password.broker' instanceof \Illuminate\Auth\Passwords\PasswordBroker,
             'translation.loader' instanceof \Illuminate\Translation\FileLoader,
@@ -326,6 +328,7 @@ namespace PHPSTORM_META {
             'queue.listener' instanceof \Illuminate\Queue\Listener,
             'queue.failer' instanceof \Illuminate\Queue\Failed\DatabaseFailedJobProvider,
             'IlluminateQueueClosure' instanceof \IlluminateQueueClosure,
+            'redis' instanceof \Illuminate\Redis\Database,
             'auth.password' instanceof \Illuminate\Auth\Passwords\PasswordBrokerManager,
             'auth.password.broker' instanceof \Illuminate\Auth\Passwords\PasswordBroker,
             'translation.loader' instanceof \Illuminate\Translation\FileLoader,
@@ -435,6 +438,7 @@ namespace PHPSTORM_META {
             'queue.listener' instanceof \Illuminate\Queue\Listener,
             'queue.failer' instanceof \Illuminate\Queue\Failed\DatabaseFailedJobProvider,
             'IlluminateQueueClosure' instanceof \IlluminateQueueClosure,
+            'redis' instanceof \Illuminate\Redis\Database,
             'auth.password' instanceof \Illuminate\Auth\Passwords\PasswordBrokerManager,
             'auth.password.broker' instanceof \Illuminate\Auth\Passwords\PasswordBroker,
             'translation.loader' instanceof \Illuminate\Translation\FileLoader,
