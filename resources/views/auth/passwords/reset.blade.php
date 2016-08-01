@@ -1,7 +1,9 @@
-@extends('layouts.account')
+@extends('layouts.layout')
+
+@section('title','reset password')
 
 {{--TODO: add reset function--}}
-@section('content')
+@section('body')
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">

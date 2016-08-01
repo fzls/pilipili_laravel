@@ -267,13 +267,11 @@ class ImageController extends Controller
         $recommended_images = Image::where('id', '!=', $image_id)->orderByRaw('rand()')->take(3)->get();
 
 
-//TODO: laravel rated(bool), rating(int)
         $_rate = RateImageEvent::where('user_id', $current_user['id'])
             ->where('image_id', $image_id)->first();
         $rated = $_rate != null;
         $rating = 0;
         if ($rated) $rating = $_rate->score;
-//TodO: laravel add tag, write comment, rating, click
         return view('image.detail', [
             'display_desc' => $display_desc,
             'click_by_user' => $click_by_user,

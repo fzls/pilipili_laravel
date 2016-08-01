@@ -55,7 +55,7 @@ return [
     |
     */
 
-    'from' => ['address' => null, 'name' => 'pilipili with Laravel'],
+    'from' => ['address' => 'webmaster@pilipili.com', 'name' => 'pilipili with Laravel'],
 
     /*
     |--------------------------------------------------------------------------
@@ -107,6 +107,6 @@ return [
     |
     */
     /*Fixme: this might be wrong*/
-    'sendmail' => 'H:/Softwares/_programming/xmapp/sendmail/sendmail.exe -bs',
+    'sendmail' => env('MAIL_SENDMAIL',''),
 
 ];
