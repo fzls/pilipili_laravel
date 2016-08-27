@@ -10,6 +10,9 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+use GuzzleHttp\Client;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Str;
 use Pilipili\Banner;
 use Pilipili\ClickImageEvent;
 use Pilipili\Comment;
@@ -77,14 +80,16 @@ Route::group([], function () {
 });
 
 //below is for test only
-function p($s){
-    echo $s.'<br>';
+function p($s) {
+    echo $s . '<br>';
 }
 
-function get_page($s, $f){
+function get_page($s, $f) {
     $f($s);
 }
 
 Route::get('test', function (Request $request) {
-    get_page('23333333333','p');
+    get_page('23333333333', 'p');
 });
+
+Route::get('proxy', 'ProxyController@corsProxy');

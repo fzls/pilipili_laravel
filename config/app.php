@@ -157,11 +157,6 @@ return [
         Pilipili\Providers\AuthServiceProvider::class,
         Pilipili\Providers\EventServiceProvider::class,
         Pilipili\Providers\RouteServiceProvider::class,
-        /*
-         * Laravel 5 IDE Helper Generator
-         */
-        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
-        Barryvdh\Debugbar\ServiceProvider::class,
     ],
 
     /*

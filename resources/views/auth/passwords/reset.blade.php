@@ -2,7 +2,6 @@
 
 @section('title','reset password')
 
-{{--TODO: add reset function--}}
 @section('body')
 <div class="container">
     <div class="row">
