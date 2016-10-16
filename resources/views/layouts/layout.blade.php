@@ -9,5 +9,6 @@
 @include('layouts.navbar')
 @yield('body')
 @include('layouts.footer')
+@include('layouts.google_analytics')
 </body>
 </html>

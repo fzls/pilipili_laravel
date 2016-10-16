@@ -28,12 +28,7 @@ class ProxyController extends Controller {
         $http   = new Client();
 
         return $http->$method($url, [
-            'query' => [
-                'lng' => 120.107,
-                'lat' => 30.295301,
-                'len' => 800,
-                '_'   => 1472267874845,
-            ],
+            'query' => $query,
         ])->getBody();
     }
 }

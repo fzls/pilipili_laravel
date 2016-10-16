@@ -76,6 +76,7 @@
 </div>
 <!--footer-->
 @include('layouts.account_footer')
+@include('layouts.google_analytics')
 </body>
 </html>
 
